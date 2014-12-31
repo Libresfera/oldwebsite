@@ -1,8 +1,8 @@
 language: ruby
 cache: bundler
-bundler_args: --without production development
+bundler_args: "--without production development"
 rvm:
-  - 2.1.5
-addons:
-  code_climate:
-    repo_token: b92077363fcac783128c21e444e04d65b8e9c53c1f71ca6a6c1ac0459e03affc
+- 2.1.5
+env:
+  global:
+    secure: I1y+4gfoZ8IQvUOAj8PI+k4n7ko7lVa0uM/vA/U9Q0dEEnhmieVMUk90pWzHmfm8D3XGsJhmdPiY1LL7c1uVeLs2LgixiOJTXceyPEe5etP7vZidGsQBU7DIvYI/Un1r9vA0jXMvkrKIdoy7MUrkC8INMywCCXU9mM6myjoWnT8=

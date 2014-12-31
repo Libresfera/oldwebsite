@@ -27,7 +27,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 # Uploads Ruby test coverage data to Code Climate
-gem 'codeclimate-test-reporter', group: :test
+gem 'codeclimate-test-reporter', group: :test, require: nil
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
