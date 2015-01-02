@@ -1,6 +1,13 @@
+AllCops:
+  Exclude:
+    - 'db/**/*'
+  RunRailsCops: true
+
 Documentation:
   Enabled: false
+
 StringLiterals:
   EnforcedStyle: single_quotes
+
 Metrics/LineLength:
   Max: 120
