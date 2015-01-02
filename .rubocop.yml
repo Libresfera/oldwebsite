@@ -1,4 +1,6 @@
 Documentation:
   Enabled: false
+StringLiterals:
+  EnforcedStyle: single_quotes
 Metrics/LineLength:
   Max: 120
