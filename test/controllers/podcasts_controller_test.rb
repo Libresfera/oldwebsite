@@ -5,41 +5,43 @@ class PodcastsControllerTest < ActionController::TestCase
     @podcast = podcasts(:one)
   end
 
-  test "should get index" do
+  test 'should get index' do
     get :index
     assert_response :success
     assert_not_nil assigns(:podcasts)
   end
 
-  test "should get new" do
+  test 'should get new' do
     get :new
     assert_response :success
   end
 
-  test "should create podcast" do
+  test 'should create podcast' do
     assert_difference('Podcast.count') do
-      post :create, podcast: { audio: @podcast.audio, description: @podcast.description, thumbnail: @podcast.thumbnail, title: @podcast.title }
+      post :create, podcast: { audio: @podcast.audio, description: @podcast.description, thumbnail: @podcast.thumbnail,
+                               title: @podcast.title }
     end
 
     assert_redirected_to podcast_path(assigns(:podcast))
   end
 
-  test "should show podcast" do
+  test 'should show podcast' do
     get :show, id: @podcast
     assert_response :success
   end
 
-  test "should get edit" do
+  test 'should get edit' do
     get :edit, id: @podcast
     assert_response :success
   end
 
-  test "should update podcast" do
-    patch :update, id: @podcast, podcast: { audio: @podcast.audio, description: @podcast.description, thumbnail: @podcast.thumbnail, title: @podcast.title }
+  test 'should update podcast' do
+    patch :update, id: @podcast, podcast: { audio: @podcast.audio, description: @podcast.description,
+                                            thumbnail: @podcast.thumbnail, title: @podcast.title }
     assert_redirected_to podcast_path(assigns(:podcast))
   end
 
-  test "should destroy podcast" do
+  test 'should destroy podcast' do
     assert_difference('Podcast.count', -1) do
       delete :destroy, id: @podcast
     end
