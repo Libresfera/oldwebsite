@@ -31,6 +31,9 @@ gem 'codeclimate-test-reporter', group: :test, require: nil
 # Use a slim template language whose goal is reduce the syntax
 gem 'slim-rails', '~> 3.0.1'
 
+# Use to easy file attachment management for ActiveRecord
+gem 'paperclip', '~> 4.2'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
