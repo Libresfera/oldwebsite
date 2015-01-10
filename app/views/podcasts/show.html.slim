@@ -1,0 +1,18 @@
+p#notice = notice
+
+p
+  strong Title:
+  = @podcast.title
+p
+  strong Description:
+  = @podcast.description
+p
+  strong Thumbnail:
+  = @podcast.thumbnail
+p
+  strong Audio:
+  = @podcast.audio
+
+= link_to 'Edit', edit_podcast_path(@podcast)
+'|
+= link_to 'Back', podcasts_path
