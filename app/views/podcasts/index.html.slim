@@ -16,7 +16,7 @@ table
       tr
         td = podcast.title
         td = podcast.description
-        td = podcast.thumbnail
+        td = image_tag podcast.thumbnail.url(:small)
         td = podcast.audio
         td = link_to 'Show', podcast
         td = link_to 'Edit', edit_podcast_path(podcast)
