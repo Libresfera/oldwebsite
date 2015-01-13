@@ -37,7 +37,8 @@ class PodcastsControllerTest < ActionController::TestCase
 
   test 'expect update podcast' do
     patch :update, id: @podcast, podcast: { title: @podcast.title, description: @podcast.description,
-                                            audio: @podcast.audio, thumbnail: fixture_file_upload('/files/homer.png', 'image/png') }
+                                            audio: @podcast.audio,
+                                            thumbnail: fixture_file_upload('/files/homer.png', 'image/png') }
     assert_redirected_to podcast_path(assigns(:podcast))
   end
 
