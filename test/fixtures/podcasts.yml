@@ -3,11 +3,9 @@
 one:
   title: MyString
   description: MyText
-  thumbnail: MyString
   audio: MyString
 
 two:
   title: MyString
   description: MyText
-  thumbnail: MyString
   audio: MyString
