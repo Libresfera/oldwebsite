@@ -11,7 +11,7 @@ p
   = image_tag @podcast.thumbnail.url(:small)
 p
   strong Audio:
-  = @podcast.audio
+  = audio_tag(@podcast.audio.url, controls: true)
 
 = link_to 'Edit', edit_podcast_path(@podcast)
 '|

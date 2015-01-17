@@ -18,8 +18,9 @@ class PodcastsControllerTest < ActionController::TestCase
 
   test 'expect create podcast' do
     assert_difference('Podcast.count') do
-      post :create, podcast: { title: @podcast.title, audio: @podcast.audio, description: @podcast.description,
-                               thumbnail: fixture_file_upload('/files/homer.png', 'image/png') }
+      post :create, podcast: { title: @podcast.title, description: @podcast.description,
+                               thumbnail: fixture_file_upload('/files/homer.png', 'image/png'),
+                               audio: fixture_file_upload('/files/free-software-song.mp3', 'audio/mpeg') }
     end
 
     assert_redirected_to podcast_path(assigns(:podcast))
@@ -37,8 +38,8 @@ class PodcastsControllerTest < ActionController::TestCase
 
   test 'expect update podcast' do
     patch :update, id: @podcast, podcast: { title: @podcast.title, description: @podcast.description,
-                                            audio: @podcast.audio,
-                                            thumbnail: fixture_file_upload('/files/homer.png', 'image/png') }
+                                            thumbnail: fixture_file_upload('/files/homer.png', 'image/png'),
+                                            audio: fixture_file_upload('/files/free-software-song.mp3', 'audio/mpeg') }
     assert_redirected_to podcast_path(assigns(:podcast))
   end
 
