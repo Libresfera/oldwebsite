@@ -1,0 +1,8 @@
+web:
+  build: .
+  command: bundle exec rackup -p 3000
+  volumes:
+    - .:/home/rails/app
+  ports:
+    - "3000:3000"
+  user: rails
