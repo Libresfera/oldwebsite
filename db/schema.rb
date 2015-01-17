@@ -13,17 +13,17 @@
 
 ActiveRecord::Schema.define(version: 20150114142310) do
 
-  create_table "podcasts", force: true do |t|
-    t.string   "title"
+  create_table "podcasts", force: :cascade do |t|
+    t.string   "title",                  limit: 255
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "thumbnail_file_name"
-    t.string   "thumbnail_content_type"
+    t.string   "thumbnail_file_name",    limit: 255
+    t.string   "thumbnail_content_type", limit: 255
     t.integer  "thumbnail_file_size"
     t.datetime "thumbnail_updated_at"
-    t.string   "audio_file_name"
-    t.string   "audio_content_type"
+    t.string   "audio_file_name",        limit: 255
+    t.string   "audio_content_type",     limit: 255
     t.integer  "audio_file_size"
     t.datetime "audio_updated_at"
   end
