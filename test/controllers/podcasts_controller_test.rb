@@ -5,18 +5,18 @@ class PodcastsControllerTest < ActionController::TestCase
     @podcast = podcasts(:one)
   end
 
-  test 'expect get index' do
+  test 'should get index' do
     get :index
     assert_response :success
     assert_not_nil assigns(:podcasts)
   end
 
-  test 'expect get new' do
+  test 'should get new' do
     get :new
     assert_response :success
   end
 
-  test 'expect create podcast' do
+  test 'should create podcast' do
     assert_difference('Podcast.count') do
       post :create, podcast: { title: @podcast.title, description: @podcast.description,
                                thumbnail: fixture_file_upload('/files/homer.png', 'image/png'),
@@ -26,24 +26,24 @@ class PodcastsControllerTest < ActionController::TestCase
     assert_redirected_to podcast_path(assigns(:podcast))
   end
 
-  test 'expect show podcast' do
+  test 'should show podcast' do
     get :show, id: @podcast
     assert_response :success
   end
 
-  test 'expect get edit' do
+  test 'should get edit' do
     get :edit, id: @podcast
     assert_response :success
   end
 
-  test 'expect update podcast' do
+  test 'should update podcast' do
     patch :update, id: @podcast, podcast: { title: @podcast.title, description: @podcast.description,
                                             thumbnail: fixture_file_upload('/files/homer.png', 'image/png'),
                                             audio: fixture_file_upload('/files/free-software-song.mp3', 'audio/mpeg') }
     assert_redirected_to podcast_path(assigns(:podcast))
   end
 
-  test 'expect destroy podcast' do
+  test 'should destroy podcast' do
     assert_difference('Podcast.count', -1) do
       delete :destroy, id: @podcast
     end
