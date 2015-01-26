@@ -22,7 +22,7 @@ module Admin
         post :create, article: { content: @article.content, title: @article.title }
       end
 
-      assert_redirected_to admin_article_path(assigns(:article))
+      assert_redirected_to admin_articles_path
     end
 
     test 'should get edit' do
@@ -32,7 +32,7 @@ module Admin
 
     test 'should update article' do
       patch :update, id: @article, article: { content: @article.content, title: @article.title }
-      assert_redirected_to admin_article_path(assigns(:article))
+      assert_redirected_to admin_articles_path
     end
 
     test 'should destroy article' do

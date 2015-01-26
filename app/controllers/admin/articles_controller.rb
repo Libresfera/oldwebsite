@@ -18,12 +18,12 @@ module Admin
     def create
       @article = Article.new(article_params)
       @article.save
-      respond_with(:admin, @article)
+      respond_with @article, location: admin_articles_path
     end
 
     def update
       @article.update(article_params)
-      respond_with(:admin, @article)
+      respond_with @article, location: admin_articles_path
     end
 
     def destroy
