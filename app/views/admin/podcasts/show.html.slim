@@ -13,4 +13,6 @@ p
   strong Audio:
   = audio_tag(@podcast.audio.url, controls: true)
 
-= link_to 'Back', podcasts_path
+= link_to 'Edit', edit_admin_podcast_path(@podcast)
+'|
+= link_to 'Back', admin_podcasts_path
