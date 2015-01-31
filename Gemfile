@@ -31,6 +31,9 @@ gem 'paperclip', '~> 4.2'
 # A set of Rails responders to dry up the application
 gem 'responders', '~> 2.0.2'
 
+# Flexible authentication solution for Rails with Warden
+gem 'devise', '~> 3.4.1'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

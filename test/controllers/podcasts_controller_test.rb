@@ -11,43 +11,8 @@ class PodcastsControllerTest < ActionController::TestCase
     assert_not_nil assigns(:podcasts)
   end
 
-  test 'should get new' do
-    get :new
-    assert_response :success
-  end
-
-  test 'should create podcast' do
-    assert_difference('Podcast.count') do
-      post :create, podcast: { title: @podcast.title, description: @podcast.description,
-                               thumbnail: fixture_file_upload('/files/homer.png', 'image/png'),
-                               audio: fixture_file_upload('/files/free-software-song.mp3', 'audio/mpeg') }
-    end
-
-    assert_redirected_to podcast_path(assigns(:podcast))
-  end
-
   test 'should show podcast' do
     get :show, id: @podcast
     assert_response :success
-  end
-
-  test 'should get edit' do
-    get :edit, id: @podcast
-    assert_response :success
-  end
-
-  test 'should update podcast' do
-    patch :update, id: @podcast, podcast: { title: @podcast.title, description: @podcast.description,
-                                            thumbnail: fixture_file_upload('/files/homer.png', 'image/png'),
-                                            audio: fixture_file_upload('/files/free-software-song.mp3', 'audio/mpeg') }
-    assert_redirected_to podcast_path(assigns(:podcast))
-  end
-
-  test 'should destroy podcast' do
-    assert_difference('Podcast.count', -1) do
-      delete :destroy, id: @podcast
-    end
-
-    assert_redirected_to podcasts_path
   end
 end
