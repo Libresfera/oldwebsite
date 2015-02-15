@@ -1,41 +1,6 @@
 module Admin
-  class ArticlesController < ApplicationController
-    before_action :set_article, only: [:edit, :update, :destroy]
-
-    respond_to :html
-
-    def index
-      @articles = Article.all
-    end
-
-    def new
-      @article = Article.new
-    end
-
-    def edit
-    end
-
-    def create
-      @article = Article.new(article_params)
-      @article.save
-      respond_with @article, location: admin_articles_path
-    end
-
-    def update
-      @article.update(article_params)
-      respond_with @article, location: admin_articles_path
-    end
-
-    def destroy
-      @article.destroy
-      respond_with(:admin, @article)
-    end
-
+  class ArticlesController < AdminController
     private
-
-    def set_article
-      @article = Article.find(params[:id])
-    end
 
     def article_params
       params.require(:article).permit(:title, :content)
